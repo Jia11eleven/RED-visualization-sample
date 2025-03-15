@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>{{config.APP_TITLE}}</title>
+
+<!-- viz's CSS styling-->
+ <link rel="stylesheet"
+ href="static/css/style.css"
+ media="screen" />
+
+ <body>
+    <div id="chart">
+        <!-- header with title & explanary info-->
+        <div id="title"> 
+        Visualizing Caleb-related posts in Feb 2025
+        </div>
+        <div id="info">
+            This is a personal project to analysis Caleb-related posts in RED in Feb 2025.
+            Data may not be comprehensive due to crawling limitation. Therefore, this page serves as 
+            a demo, instead of a complete social media analysis project.
+            Crawler is credits to 
+            <a href="https://github.com/NanmiCoder/MediaCrawler">
+                NanmiCoder's MediaCrawler
+            </a>
+            The data used was scraped from RED using key words: 夏以昼 & 恋与深空夏以昼。
+        </div>
+
+
+        <!--placeholders for viz compoents-->
+        <div id="caleb-viz">
+
+            <!--begin menu bar-->
+            <div id="caleb-menu">
+                <div id="post-select">
+                    Post Types
+                    <select>
+                        <option value="All">
+                            All
+                        </option>
+                        <option value="Caleb Post">
+                            Caleb Only
+                        </option>
+                        <option value="General Post">
+                            General
+                        </option>
+                    </select>
+                </div>
+                <div>
+                    <label for="tag-select">Tag List</label>
+                    <select id="tag-select"></select>
+                </div>
+                
+                <div>
+                    <label for="ip-select">IP List</label>
+                    <select id="ip-select"></select>
+                </div>
+                
+                
+            </div>
+            <!--end menu bar-->
+
+            <!--begin caleb-viz components-->
+            <div id="chart-holder" class="_dev">
+                <!--timeline of posts countss-->
+                <div id="post-timeline">
+                </div>
+
+                <div id="visual-container">
+                    <div id="plots-container">
+                        <div id="plots-content">
+                            <!-- KPI display -->
+                            <div id="like-comment-ratio" class="kpi-box"></div>
+                            <!-- IP map -->
+                            <div id="creator-map-container">
+                                <h2>Post Counts by IP</h2>
+                                <div id="creator-map-content">
+                                    <div id="creator-map">
+                                        <div id="map-tooltip"></div>
+                                    </div>
+                                    <div id="non-mapped-ips">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div id="lists-container">  
+                        <div id="creator-list">
+                            <h2>Popular Creators</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Nickname</th>
+                                        <th>IP Location</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                
+                        <!-- Creator Bio Section -->
+                        <div id="popular-creator">
+                            <div id="infobox">
+                                <div class="property">
+                                    <div class="nickname">User Name</div>
+                                    <span name="nickname"></span>
+                                </div>
+                                <div class="property">
+                                    <div class="post-title">Post Title</div>
+                                    <span name="title"></span>
+                                </div>
+                                <div class="property">
+                                    <div class="post-desc">Post Description</div>
+                                    <span name="desc"></span>
+                                </div>
+                                <div class="property">
+                                    <div class="tag-list">Tags</div>
+                                    <span name="tags"></span>
+                                </div>
+                            </div>
+                            <div id="link">
+                                <a href="#">click to go to the post</a>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+                
+            <!--end of viz components-->
+
+        </div>
+    </div>
+
+    <!--js files-->
+    <!-- 3rd party js lib, e.g. d3-->
+     <script src = "https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter2/1.4.6/crossfilter.min.js"></script>
+     <!--js script for nobel elements-->
+     <script src = "static/js/caleb_core.js"></script>
+     <script src = "static/js/caleb_menu.js"></script>
+     <script src = "static/js/caleb_timeline.js"></script>
+     <script src = "static/js/caleb_main.js"></script>
+     <script src = "static/js/caleb_map.js"></script>
+     <script src = "static/js/caleb_creator_list.js"></script>
+     <script src = "static/js/caleb_kpi.js"></script>
+   
+ </body>

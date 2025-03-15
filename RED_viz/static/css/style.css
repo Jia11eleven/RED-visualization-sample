@@ -1,0 +1,267 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+
+a:link {
+    color:blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#caleb-viz {
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    height:960px;
+}
+
+#title {
+    position: absolute;
+    font-size: 30px;
+    font-weight: 100%;
+    top: 20px;
+}
+
+#info {
+    position: absolute;
+    font-size: 11px;
+    top: 18px;
+    width: 300px;
+    right: 0px;
+}
+
+#caleb-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #e3e3e3;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#post-select, #tag-select, #ip-select {
+    font-size: 14px;
+}
+
+select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+#chart-holder {
+    width: 100%;
+    position: relative;
+}
+
+#chart-holder svg {
+    width: 100%;
+    height: 100%;
+}
+
+#post-timeline {
+    position: relative;
+    top: 0;
+    height: 180px;
+    width: 100%;
+    min-width: 1px;
+    margin-bottom: 10px;
+}
+
+#post-timeline svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#visual-container {
+    display: flex;
+    flex-direction: row;  /* Horizontal layout */
+    justify-content: space-between;  /* Distribute space evenly */
+    align-items: flex-start;  /* Align to top */
+    width: 100%;
+    gap: 5px; /* Space between elements */
+}
+
+#plots-container {
+    border-radius: 10px;
+    background: #cce7ff;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;  /* Ensure it takes most of the space */
+    height: 800px;
+}
+
+#lists-container {
+    background: #efbc63;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;  /* Take less space than the map */
+    height: 800px;
+}
+
+#creator-map {
+    flex: 5; 
+    height: 500px;
+}
+
+#popular-creator {
+    border-radius: 8px;
+    background: white;
+    height: 300px;
+    width: 88%;
+    padding: 15px;
+}
+
+#infobox .property div {
+    margin-top: 5px;
+    font-weight: bold; /* Make labels bold */
+    margin-bottom: 3px; /* Add some spacing */
+}
+
+#link {
+    margin-top: 15px;
+}
+
+#creator-map {
+    flex: 5; 
+    height: 500px;
+}
+
+/* New wrapper to ensure map and list align */
+#plots-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.kpi-box {
+    background: #0235a3;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color:white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.kpi-metric {
+    font-size: 22px;
+    color: white;
+    margin: 10px;
+}
+
+
+/* Flexbox container for the map and text box */
+#creator-map-content {
+    width: 100%;
+    height: 600px;
+    display: flex; /* Place map and text box side by side */
+    justify-content: space-between; /* Space them apart */
+    align-items: flex-start; /* Align them at the top */
+}
+
+
+/* Map styles */
+#creator-map {
+    flex: 5; 
+    height: 100%;
+}
+
+#map-tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate(-100%, -100%);  /* Center tooltip at mouse pointer */
+}
+
+/* Text box styles */
+#non-mapped-ips {
+    flex: 1; /* Takes 1 part of the available space */
+    padding: 15px;
+    background: white;  /* Ensure text is readable */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    max-height: 50%; /* Match the map's height */
+    overflow-y: auto; /* Scroll if there are too many items */
+}
+
+
+
+
+
+
+
+/*
+#map-tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+
+#popular-creator {
+    padding: 20px;
+}
+
+.property {
+    margin-bottom: 10px;
+}
+
+.property div {
+    font-weight: bold;
+}
+
+#link a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#link a:hover {
+    text-decoration: underline;
+}
+*/
